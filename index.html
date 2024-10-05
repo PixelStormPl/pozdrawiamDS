@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #message-input {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #submit-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Write Your Message</h1>
+
+    <textarea id="message-input" placeholder="Type your message here..."></textarea>
+    <button id="submit-btn">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function () {
+            const userMessage = document.getElementById('message-input').value;
+            const finalMessage = "Dzień dobry, \n" + userMessage + "\n pozdrawiam \n DS";
+            document.getElementById('result').innerText = finalMessage;
+        });
+    </script>
+
+</body>
+
+</html>
